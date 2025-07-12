@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - NSP NEXUS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Contact Us</h1>
+        
+        <div class="success-message" id="successMessage">
+            Thank you for your message! We'll get back to you soon.
+        </div>
+
+        <form id="contactForm">
+            <div class="form-group">
+                <label for="name">Name *</label>
+                <input type="text" id="name" name="name" required>
+                <div class="error-message" id="nameError"></div>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email *</label>
+                <input type="email" id="email" name="email" required>
+                <div class="error-message" id="emailError"></div>
+            </div>
+
+            <div class="form-group">
+                <label for="subject">Subject *</label>
+                <input type="text" id="subject" name="subject" required>
+                <div class="error-message" id="subjectError"></div>
+            </div>
+
+            <div class="form-group">
+                <label for="message">Message *</label>
+                <textarea id="message" name="message" placeholder="Please enter your message here..." required></textarea>
+                <div class="error-message" id="messageError"></div>
+            </div>
+
+            <button type="submit" class="submit-btn">Send Message</button>
+        </form>
+    </div>
+
+    <!-- Thank you popup -->
+    <div class="popup-overlay" id="popupOverlay"></div>
+    <div class="popup" id="thankYouPopup">
+        <h3>Thank You!</h3>
+        <p>Your message has been sent successfully. We appreciate your feedback and will get back to you soon.</p>
+        <button onclick="closePopup()">Close</button>
+    </div>
+    <script src="logic.js"></script>
+</body>
+</html>
